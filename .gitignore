@@ -1,0 +1,81 @@
+# Ignore build artifacts
+build/
+
+# Ignore compiled Common-Lisp files
+*.FASL
+*.fasl
+*.fas
+*.lisp-temp
+*.dfsl
+*.pfsl
+*.d64fsl
+*.p64fsl
+*.lx64fsl
+*.lx32fsl
+*.dx64fsl
+*.dx32fsl
+*.fx64fsl
+*.fx32fsl
+*.sx64fsl
+*.sx32fsl
+*.wx64fsl
+*.wx32fsl
+
+# Ignore etags/ctags
+TAGS
+GPATH
+GRTAGS
+GTAGS
+
+# Ignore C object files and libraries
+*.o
+*.so
+*.a
+
+*.log
+*.tmp
+
+# Emacs/Vim Backup/Auto-Save files
+*~
+.#*
+\#*\#
+,*
+
+# MacOS thing
+.DS_Store
+
+# Verilog files
+**.v
+
+# Documentation & Autoconf/Automake stuff
+/aclocal.m4
+/autom4te.cache
+/build-aux
+/config.status
+/configure
+/doc/*.1
+/doc/.dirstamp
+/doc/contributing.*.texi
+/doc/shwatt*.aux
+/doc/shwatt*.cp
+/doc/shwatt*.cps
+/doc/shwatt*.fn
+/doc/shwatt*.fns
+/doc/shwatt*.html
+/doc/shwatt*.info
+/doc/shwatt*.info-[0-9]
+/doc/shwatt*.ky
+/doc/shwatt*.pdf
+/doc/shwatt*.pg
+/doc/shwatt*.toc
+/doc/shwatt*.t2p
+/doc/shwatt*.tp
+/doc/shwatt*.vr
+/doc/shwatt*.vrs
+/doc/shwatt.*.texi
+/doc/stamp-vti
+/doc/version.texi
+/doc/version-*.texi
+/m4/*
+Makefile
+Makefile.in
