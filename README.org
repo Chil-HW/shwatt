@@ -1,1 +1,6 @@
 #+TITLE: SHWaTT: Simulating HardWare and Time Traveling
+
+* REPL Development
+** Change Logging Level
+From [[https://github.com/7max/log4cl][Log4CL's README]], you can change the logging level with ~(log:config :level)~.
+For example, to enable the debug level, use ~(log:config :debug)~.
