@@ -82,7 +82,16 @@
                (invoke "./bootstrap")
                (apply invoke "sh" "./configure" "SHELL=sh" configure-flags)
                (apply invoke "make" "info" make-flags)
-               (install-file "doc/shwatt.info" info)))))))
+               (install-file "doc/shwatt.info" info))))
+         (add-after 'install 'install-binary
+           (lambda* (#:key (configure-flags '()) (make-flags '()) outputs
+                     #:allow-other-keys)
+             (let* ((out  (assoc-ref outputs "out"))
+                    (bin (string-append out "/bin")))
+               (invoke "./bootstrap")
+               (apply invoke "sh" "./configure" "SHELL=sh" configure-flags)
+               (apply invoke "make" "executable" make-flags)
+               (install-file "bin/shwatt" bin)))))))
    (synopsis "Simulating HardWare and Time Traveling")
    (description "SHWaTT (Simulating HardWare and Time Traveling).")
    (home-page "http://github.com/Chil-HW/shwatt")

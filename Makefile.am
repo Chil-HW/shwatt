@@ -16,6 +16,9 @@ shwatt_files := shwatt.asd $(shell find . -type f -name '*.lisp')
 build: $(shwatt_files)
 	$(lisp_eval) '(asdf:compile-system :shwatt)'
 
+executable: $(shwatt_files)
+	$(lisp_eval) '(asdf:operate :build-op :shwatt)'
+
 shwatt_tests := shwatt.asd $(shell find ./tests/ -type f -name '*.lisp')
 .PHONY: check
 check: $(shwatt_files) $(shwatt_tests)

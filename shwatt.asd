@@ -4,6 +4,10 @@
   :pathname #p"source/"
   :components ((:file "shwatt"))
   :depends-on (:log4cl)
+  :build-operation "asdf:program-op"
+  ;; NOTE: build-pathname is relative to the :pathname of this system!
+  :build-pathname #+linux "../bin/shwatt"
+  :entry-point "shwatt:hello"
   :in-order-to ((test-op (test-op "shwatt/tests"))))
 
 (defsystem :shwatt/tests
