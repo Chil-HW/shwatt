@@ -74,7 +74,7 @@
     (list
      #:phases
      #~(modify-phases %standard-phases
-         (add-after 'install 'install-manual
+         (add-after 'check 'install-manual
            (lambda* (#:key (configure-flags '()) (make-flags '()) outputs
                      #:allow-other-keys)
              (let* ((out  (assoc-ref outputs "out"))
@@ -83,7 +83,7 @@
                (apply invoke "sh" "./configure" "SHELL=sh" configure-flags)
                (apply invoke "make" "info" make-flags)
                (install-file "doc/shwatt.info" info))))
-         (add-after 'install 'install-binary
+         (add-after 'check 'install-binary
            (lambda* (#:key (configure-flags '()) (make-flags '()) outputs
                      #:allow-other-keys)
              (let* ((out  (assoc-ref outputs "out"))
