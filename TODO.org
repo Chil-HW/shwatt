@@ -1,0 +1,9 @@
+#+TITLE: TODO
+
+* Waveform output
+  * [[https://en.wikipedia.org/wiki/Value_change_dump][VCD (Value Change Dump)]]
+    ASCII-based file format.
+    Quite inefficient, but VCD is the only standard format for storing digital waveforms from HDL simulations.
+  * [[https://blog.timhutt.co.uk/fst_spec/][FST (Fast Signal Trace)]]
+    Developed by GtkWave authors to match FSDB (Fast Signal DataBase) from Synopsys' VCS and WLF (Wave Log Format) from Mentor's Questa simulators.
+    - [[https://github.com/MaxXSoft/fst-tools][fst-tools]] :: Written in Rust, wrapping around the FST C API from Gtkwave.
