@@ -8,3 +8,4 @@
     Developed by GtkWave authors to match FSDB (Fast Signal DataBase) from Synopsys' VCS and WLF (Wave Log Format) from Mentor's Questa simulators.
     - [[https://github.com/MaxXSoft/fst-tools][fst-tools]] :: Written in Rust, wrapping around the FST C API from Gtkwave.
     - [[https://tomverbeure.github.io/assets/gdbwave/gtkwave_manual.pdf#page=137]["Research Paper"]] :: The original description and motivation for FST.
+    - [[https://blog.timhutt.co.uk/fst_spec/][FST Format Specification]] :: Unofficial formalization of FST format
